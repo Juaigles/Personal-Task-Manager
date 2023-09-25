@@ -13,7 +13,7 @@ function RegisterPage() {
     const navigate = useNavigate()
 
     useEffect(() => {
-        if (isAuthenticated) navigate("/login")
+        if (isAuthenticated) navigate("/tasks")
     }, [isAuthenticated])
 
 
@@ -32,7 +32,7 @@ function RegisterPage() {
                     </div>
                 ))
             }
-            <h1 className='text-2xl font-bold'>Register</h1>
+            <h1 className='text-3xl font-bold my-2'>Register</h1>
             <form onSubmit={onSubmit}>
                 <input type="text" {...register('username', { required: true })}
                     className='w-full bg-zinc-700 text-white px-4 py-2 rounded-md my-2'
@@ -67,7 +67,8 @@ function RegisterPage() {
                         </p>
                     )
                 }
-                <button type='submit'>
+                <button type='submit'
+                className='bg-orange-500 text-white px-4 py-2 rounded-md my-2'>
                     Register
                 </button>
             </form>
