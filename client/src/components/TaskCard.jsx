@@ -7,16 +7,18 @@ days.extend(utc)
 
 function TaskCard({ task }) {
     const { deleteTask } = useTasks()
+    const title = task.title.charAt(0).toUpperCase() + task.title.slice(1)
+    const description = task.description.charAt(0).toUpperCase() + task.description.slice(1)
 
     return (
         <div className='bg-zinc-800 max-w-md w-full p-10 rounded-md'>
 
-            <h1 className='text-2xl font-bold'>{task.title}</h1>
+            <h1 className='text-2xl font-bold'>{title}</h1>
             <hr className='p-2'/>
 
             <div className='bg-zinc-700 h-2/6 p-2 '>
 
-                <p className=' text-slate-300'>{task.description}</p>
+                <p className=' text-slate-300'>{description}</p>
             </div>
             <p className='py-3'>{days(task.date).utc().format("DD/MM/YYYY")}</p>
 
