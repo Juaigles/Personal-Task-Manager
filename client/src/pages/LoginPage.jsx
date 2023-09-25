@@ -55,13 +55,13 @@ function LoginPage() {
                         )
                     }
                     <button type='submit'
-                     className='bg-orange-500 text-white px-4 py-2 rounded-md my-2'>
+                     className='bg-orange-500 text-white px-4 py-2 rounded-3xl  my-2  hover:text-sky-500'>
                     
                         Login
                     </button>
                 </form>
                 <p className='flex gap-x-2 justify-between  text-violet-400'>
-                    Don't have an account yet? <Link to="/register" className='text-sky-500'>Sign up</Link>
+                    Don't have an account yet? <Link to="/register" className='text-sky-500 hover:text-white'>Sign up</Link>
                 </p>
             </div>
         </div>
